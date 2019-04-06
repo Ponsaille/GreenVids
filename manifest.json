@@ -1,0 +1,8 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "GreenVids",
+  "version": "0.1.0",
+  "description": "Allows you to automaticly set the quality qualities of internets videos"
+ 
+}
