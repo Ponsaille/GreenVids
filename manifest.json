@@ -15,6 +15,11 @@
       "js": ["contents/twitch.js"],
       "run_at": "document_start",
       "matches": ["*://www.twitch.tv/*"]
+    },
+    {
+      "js": ["contents/dailymotion.js"],
+      "run_at": "document_start",
+      "matches": ["*://www.dailymotion.com/*"]
     }
   ]
  
