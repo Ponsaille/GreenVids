@@ -9,7 +9,12 @@
     {
       "js": ["contents/youtube.js"],
       "run_at": "document_start",
-      "matches": ["https://www.youtube.com/watch*"]
+      "matches": ["*://www.youtube.com/watch*"]
+    },
+    {
+      "js": ["contents/twitch.js"],
+      "run_at": "document_start",
+      "matches": ["*://www.twitch.tv/*"]
     }
   ]
  
