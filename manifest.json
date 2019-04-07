@@ -3,6 +3,14 @@
  
   "name": "GreenVids",
   "version": "0.1.0",
-  "description": "Allows you to automaticly set the quality qualities of internets videos"
+  "description": "Allows you to automaticly set the quality qualities of internets videos",
+
+  "content_scripts": [
+    {
+      "js": ["contents/youtube.js"],
+      "run_at": "document_start",
+      "matches": ["https://www.youtube.com/watch*"]
+    }
+  ]
  
 }
