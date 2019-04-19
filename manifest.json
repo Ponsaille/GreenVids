@@ -4,6 +4,14 @@
   "name": "GreenVids",
   "version": "0.1.0",
   "description": "Allows you to automaticly set the quality qualities of internets videos",
+  "permissions": ["storage"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
 
   "content_scripts": [
     {
