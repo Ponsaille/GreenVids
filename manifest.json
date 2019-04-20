@@ -3,7 +3,7 @@
  
   "name": "GreenVids",
   "version": "0.1.0",
-  "description": "Allows you to automaticly set the quality qualities of internets videos",
+  "description": "Sets the quality of your vides for you !",
   "permissions": ["storage"],
   "icons": {
     "16": "images/logo-16.png",
