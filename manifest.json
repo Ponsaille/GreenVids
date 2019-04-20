@@ -5,6 +5,12 @@
   "version": "0.1.0",
   "description": "Allows you to automaticly set the quality qualities of internets videos",
   "permissions": ["storage"],
+  "icons": {
+    "16": "images/logo-16.png",
+    "32": "images/logo-32.png",
+    "48": "images/logo-48.png",
+    "128": "images/logo-128.png"
+  },
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
