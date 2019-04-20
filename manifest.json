@@ -27,6 +27,11 @@
 
   "content_scripts": [
     {
+      "js": ["contents/all.js"],
+      "run_at": "document_start",
+      "matches": ["*://www.youtube.com/watch*","*://www.twitch.tv/*","*://www.dailymotion.com/*"]
+    },
+    {
       "js": ["contents/youtube.js"],
       "run_at": "document_start",
       "matches": ["*://www.youtube.com/watch*"]
@@ -41,6 +46,10 @@
       "run_at": "document_start",
       "matches": ["*://www.dailymotion.com/*"]
     }
-  ]
- 
+  ],
+  "applications": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  }
 }

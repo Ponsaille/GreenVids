@@ -8,7 +8,7 @@ const qualities = {
   low: "small"
 }
 
-chrome.storage.sync.get(["videoQuality"], function(result) {
+browser.storage.sync.get(["videoQuality"], function(result) {
   script.innerHTML = `
     let playerGV
     function onYouTubePlayerReady(e) {

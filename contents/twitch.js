@@ -7,7 +7,7 @@ const qualities = {
   low: "160p30"
 }
 
-chrome.storage.sync.get(["videoQuality"], function(result) {
+browser.storage.sync.get(["videoQuality"], function(result) {
 
   if(result.videoQuality == "default") {
     script.innerHTML = `
