@@ -13,7 +13,7 @@ browser.storage.sync.get(["videoQuality"], function(result) {
     let playerGV
     function onYouTubePlayerReady(e) {
       playerGV = e
-      playerGV.setPlaybackQualityRange('${qualities[result.videoQuality]}', '${qualities[result.videoQuality]}')
+      playerGV.setPlaybackQualityRange('small', '${qualities[result.videoQuality]}')
     }
   `;
 
