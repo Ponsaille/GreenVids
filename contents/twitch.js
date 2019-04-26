@@ -7,15 +7,17 @@ const qualities = {
   low: "160p30"
 }
 
-browser.storage.sync.get(["videoQuality"], function(result) {
+browser.storage.sync.get(["videoQuality", "music"], function(result) {
+  let quality = result.music ? "low" : result.videoQuality;
 
-  if(result.videoQuality == "default") {
+  if(quality == "default") {
+    // Removing the local storage is the same as setting the video quality as default
     script.innerHTML = `
       localStorage.removeItem('video-quality')
     `
   } else {
     script.innerHTML = `
-      localStorage.setItem('video-quality', '{"default":"${qualities[result.videoQuality]}","clips":"${qualities[result.videoQuality]}"}')
+      localStorage.setItem('video-quality', '{"default":"${qualities[quality]}","clips":"${qualities[quality]}"}')
     `
   }
 

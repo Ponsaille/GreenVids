@@ -4,18 +4,22 @@ const qualities = {
   high: "720",
   large: "480",
   medium: "380",
-  low: "240"
+  low: "240",
+  lowest: '144'
 }
 
-browser.storage.sync.get(["videoQuality"], function(result) {
+browser.storage.sync.get(["videoQuality", "music"], function(result) {
+  let quality = result.music ? "large" : result.videoQuality;
 
-  if(result.videoQuality == "default") {
+  if(quality == "default") {
+    // Removing the local storage is the same as setting the video quality as default
     script.innerHTML = `
       localStorage.removeItem('dmp_quality')
     `
   } else {
+    // Saving the videoquality for one day
     script.innerHTML = `
-      localStorage.setItem('dmp_quality', '{"expires":${Date.now()+1000*60*60},"data":"${qualities[result.videoQuality]}"}')
+      localStorage.setItem('dmp_quality', '{"expires":${Date.now()+1000*60*60*24},"data":"${qualities[quality]}"}')
     `
   }
 

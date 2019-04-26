@@ -9,4 +9,7 @@ browser.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({videoQuality: 'large'}, function() {
     console.log("The quality is large.");
   });
+  browser.storage.sync.set({music: false}, function() {
+    console.log("The music mode is off");
+  });
 });
